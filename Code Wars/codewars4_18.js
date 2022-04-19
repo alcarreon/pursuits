@@ -78,3 +78,62 @@ let sumStr = (a, b) => (+a + +b).toString();
 // console.log(sumStr("4", "5")); // "9"
 // console.log(sumStr("34", "5")); // "39"
 // console.log(sumStr("", "")); // "0"
+
+// Your task is to create a function that does four basic mathematical operations.
+
+let basicOp = (op, num1, num2) => {
+  if (op === "+") {
+    return num1 + num2;
+  } else if (op === "-") {
+    return num1 - num2;
+  } else if (op === "*") {
+    return num1 * num2;
+  } else if (op === "/") {
+    return num1 / num2;
+  } else {
+    return "you did not enter a number";
+  }
+};
+
+// console.log(basicOp("+", 4, 7)); // 11
+// console.log(basicOp("-", 15, 18)); // -3
+// console.log(basicOp("*", 5, 5)); // 25
+// console.log(basicOp("/", 49, 7)); // 7
+
+// Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated.
+
+class Ball {
+  constructor(ballType = "regular") {
+    this.ballType = ballType;
+  }
+}
+
+ball1 = new Ball();
+ball2 = new Ball("super");
+// console.log(ball1);
+// console.log(ball2);
+
+String.prototype.toJadenCase = function () {
+  return this.split(" ")
+    .map(function (word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+};
+
+let str = "How can mirrors be real if our eyes aren't real";
+// console.log(str.toJadenCase());
+
+// Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+let sumTwoSmallestNumbers = (arr) =>
+  arr
+    .sort((x, y) => x - y)
+    .slice(0, 2)
+    .reduce((x, y) => x + y, 0);
+
+console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22])); // 13
+console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43])); // 6
+console.log(sumTwoSmallestNumbers([3, 87, 45, 12, 7])); // 10
+console.log(sumTwoSmallestNumbers([23, 71, 33, 82, 1])); // 24
+console.log(sumTwoSmallestNumbers([52, 76, 14, 12, 4])); // 16
