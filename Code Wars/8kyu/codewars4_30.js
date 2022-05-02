@@ -31,8 +31,8 @@ let paperwork = (n, m) => {
   }
 };
 
-console.log(paperwork(5, 5)); // 25
-console.log(paperwork(5, -5)); // 0
-console.log(paperwork(-5, -5)); // 0
-console.log(paperwork(-5, 5)); // 0
-console.log(paperwork(5, 0)); // 0
+// console.log(paperwork(5, 5)); // 25
+// console.log(paperwork(5, -5)); // 0
+// console.log(paperwork(-5, -5)); // 0
+// console.log(paperwork(-5, 5)); // 0
+// console.log(paperwork(5, 0)); // 0
