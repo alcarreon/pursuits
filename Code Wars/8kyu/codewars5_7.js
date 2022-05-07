@@ -119,5 +119,18 @@ let points = (arr) => {
 let areaOrPerimeter = (num1, num2) =>
   num1 == num2 ? Math.pow(num1, 2) : 2 * (num1 + num2);
 
-console.log(areaOrPerimeter(4, 4)); // 16
-console.log(areaOrPerimeter(6, 10)); // 32
+// console.log(areaOrPerimeter(4, 4)); // 16
+// console.log(areaOrPerimeter(6, 10)); // 32
+
+// Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
+
+let between = (num1, num2) => {
+  let total = [];
+  for (num1; num1 <= num2; num1++) {
+    total.push(num1);
+  }
+  return total;
+};
+
+console.log(between(1, 4)); // [1, 2, 3, 4]
+console.log(between(-2, 2)); // [-2, -1, 0, 1, 2]
