@@ -52,6 +52,12 @@ let shark = (pontoonDist, sharkDist, youSpeed, sharkSpeed, dolphin) => {
 
 let capitalizeWord = (word) => word[0].toUpperCase() + word.slice(1);
 
-console.log(capitalizeWord("word")); // 'Word'
-console.log(capitalizeWord("i")); // 'I'
-console.log(capitalizeWord("glasswear")); // 'Glasswear'
+// console.log(capitalizeWord("word")); // 'Word'
+// console.log(capitalizeWord("i")); // 'I'
+// console.log(capitalizeWord("glasswear")); // 'Glasswear'
+
+// Write a function that returns a string in which firstname is swapped with last name.
+
+let nameShuffler = (str) => str.split(" ").reverse().join(" ");
+
+console.log(nameShuffler("john McClane")); // 'McClane john'
