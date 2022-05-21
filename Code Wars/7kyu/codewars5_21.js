@@ -83,6 +83,11 @@ const roundToNext5 = (num) => Math.ceil(num / 5) * 5;
 
 // Given [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]], your function should return [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
+// parameters a nested array of arrays
+// returns number
+// examples
+// pseudo code given an array of nested arrays flatten each element back into a 1 dimensional array after that sort the array numerically into ascending order
+
 const flattenAndSort = (arr) => arr.flat(2).sort((x, y) => x - y);
 // const flattenAndSort = (arr) => [].concat(...arr).sort((x, y) => x - y);
 
@@ -97,3 +102,46 @@ const flattenAndSort = (arr) => arr.flat(2).sort((x, y) => x - y);
 //   ])
 // ); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // console.log(flattenAndSort([[1, 3, 5], [100], [2, 4, 6]])); // [1, 2, 3, 4, 5, 6, 100]
+
+// Row Weights
+// Scenario
+// Several people are standing in a row divided into two teams.
+// The first person goes into team 1, the second goes into team 2, the third goes into team 1, and so on.
+
+// Task
+// Given an array of positive integers (the weights of the people), return a new array/tuple of two integers, where the first one is the total weight of team 1, and the second one is the total weight of team 2.
+
+// parameters array
+// returns array
+// examples
+// pseudo code create two variables one for team one and a second for team two, go through each array and if the element is even add it to the variable for team one, otherwise add the odd element to team two, add them both to an a new array after the total is calculated for both teams
+
+const rowWeights = (arr) => {
+  let team1 = arr.filter((x, y) => y % 2 == 0).reduce((x, y) => x + y, 0);
+  let team2 = arr.filter((x, y) => y % 2 == 1).reduce((x, y) => x + y, 0);
+  let totalTeams = [team1, team2];
+  return totalTeams;
+};
+
+// console.log(rowWeights([80])); // [80, 0]
+// console.log(rowWeights([100, 50])); // [100,50]
+// console.log(rowWeights([50, 60, 70, 80])); // [120, 140]
+// console.log(rowWeights([13, 27, 49])); // [62, 27]
+
+// Power of two
+// Complete the function power_of_two/powerOfTwo (or equivalent, depending on your language) that determines if a given non-negative integer is a power of two. From the corresponding Wikipedia entry:
+
+// a power of two is a number of the form 2n where n is an integer, i.e. the result of exponentiation with number two as the base and integer n as the exponent.
+
+// You may assume the input is always valid.
+
+// parameters number
+// returns boolean
+// examples
+// pseudo the first part of the expression checks to see if the number is not equal to 0, then it check to see if the number and the number - 1 converted to binary is equal to 0 in binary
+
+const isPowerOfTwo = (num) => num != 0 && (num & (num - 1)) == 0;
+
+console.log(isPowerOfTwo(2)); // true
+console.log(isPowerOfTwo(4096)); // true
+console.log(isPowerOfTwo(5)); // false
