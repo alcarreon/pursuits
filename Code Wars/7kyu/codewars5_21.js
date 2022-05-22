@@ -138,10 +138,27 @@ const rowWeights = (arr) => {
 // parameters number
 // returns boolean
 // examples
-// pseudo the first part of the expression checks to see if the number is not equal to 0, then it check to see if the number and the number - 1 converted to binary is equal to 0 in binary
+// pseudo code the first part of the expression checks to see if the number is not equal to 0, then it check to see if the number and the number - 1 converted to binary is equal to 0 in binary
 
 const isPowerOfTwo = (num) => num != 0 && (num & (num - 1)) == 0;
 
-console.log(isPowerOfTwo(2)); // true
-console.log(isPowerOfTwo(4096)); // true
-console.log(isPowerOfTwo(5)); // false
+// console.log(isPowerOfTwo(2)); // trulse
+
+// Sort the Gift Code
+// Happy Holidays fellow Code Warriors!
+// Santa's senior gift organizer Elf developed a way to represent up to 26 gifts by assigning a unique alphabetical character to each gift. After each gift was assigned a character, the gift organizer Elf then joined the characters to form the gift ordering code.
+
+// Santa asked his organizer to order the characters in alphabetical order, but the Elf fell asleep from consuming too much hot chocolate and candy canes! Can you help him out?
+
+// Sort the Gift Code
+// Write a function called sortGiftCode/sort_gift_code/SortGiftCode that accepts a string containing up to 26 unique alphabetical characters, and returns a string containing the same characters in alphabetical order.
+
+// parameters string
+// returns string
+// examples
+// pseudo code given a string sort it into alphabetical order
+
+const sortGiftCode = (str) => str.split("").sort().join("");
+console.log(sortGiftCode("abcdef")); // 'abcdef'
+console.log(sortGiftCode("pqksuvy")); // 'kpqsuvy'
+console.log(sortGiftCode("zyxwvutsrqponmlkjihgfedcba")); // 'abcdefghijklmnopqrstuvwxyz'
