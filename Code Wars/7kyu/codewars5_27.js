@@ -51,4 +51,4 @@ const f = (num) => {
   }
 };
 
-console.log(lotNums(100));
+console.log(f(100));
