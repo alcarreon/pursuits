@@ -26,7 +26,16 @@ const stantonMeasure = (arr) => {
 // examples
 // pseudo code given an array use filter, given the current element's index use indexOf to see if the current index is different than that of indexOf which tells us that it is a duplicate
 
-const duplicates = (arr) => arr.filter((x, y) => arr.indexOf(x) !== y);
+// const duplicates = (array) => [
+//   ...new Set(array.filter((item, index) => array.indexOf(item) !== index)),
+// ];
 
-console.log(duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3, "5"])); // [4, 3, 1]
-console.log(duplicates([0, 1, 2, 3, 4, 5])); // []
+// console.log(duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3, "5"])); // [4, 3, 1]
+// console.log(duplicates([0, 1, 2, 3, 4, 5])); // []
+// console.log(duplicates([5, 5, 1, 1, 2]));
+
+const array = ["🐑", 1, 2, "🐑", "🐑", 3, "🐑"];
+
+console.log(array.filter((item, index) => array.indexOf(item) !== index));
+
+// ['🐑','🐑']
