@@ -24,28 +24,28 @@ data2 = ["Johanna", "", "Gibbs", "13-Dec-1981", "F"];
 
 data3 = ["Andrew", "Robert", "Lee", "02-September-1981", "M"];
 
+data4 = ["Andrew", "Robert", "Leeeeeeeeeeeee", "02-September-1981", "M"];
+
 const driver = (arr) => {
-  if (arr[2].length < 5) {
+  let surname = arr[2].toUpperCase();
+  if (surname.length < 5) {
     for (let i = arr[2].length; i < 5; i++) {
-      arr[2] += 9;
+      surname += "9";
     }
-  }
-  console.log(arr[2]);
-  let decade = arr[3].split("-")[2][2];
-  console.log(decade);
-  if (arr[4] == "F") {
-    console.log(new Date(arr[3]).getMonth());
-    let month = new Date(arr[3]).getMonth() + 51;
-    console.log(month);
   } else {
-    let month = new Date(arr[3].getMonth() + 1);
-    console.log();
+    surname = surname.slice(0, 5);
   }
-  let day = arr[3].split("-");
-  console.log(day[0]);
-  let;
+  // digit from the year of brith
+  surname += arr[3].slice(-2, -1);
+
+  // month of birth
+  if (arr[4] == "F") {
+  }
+  console.log(surname);
+  return surname;
 };
 
-// console.log(driver(data1));
-console.log(driver(data2));
-// console.log(driver(data3));
+console.log(driver(data1)); // "SMITH001010JJ9AA"
+console.log(driver(data2)); // "GIBBS862131J99AA"
+console.log(driver(data3)); // "LEE99809021AR9AA"
+console.log(driver(data4));
