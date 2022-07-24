@@ -5,6 +5,11 @@
 // [12, 34, 56, 78]  =>  "09"
 // [2015, 8, 26]     =>  "3479"
 
+// parameters numbers
+// returns string
+// examples
+// pseudo code given a collection of numbers join them into a string, then create an array from 0 - 9 and use filter to display only the numbers that are not already given by the user
+
 const unusedDigits = (...arr) => {
   var digits = arr.join();
 
