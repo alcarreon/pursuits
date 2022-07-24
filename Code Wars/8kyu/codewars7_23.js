@@ -6,6 +6,11 @@
 
 // Return the resulting array.
 
+// parameters array
+// returns array
+// examples
+// pseudo code map through the array and check to see if each element is a vowel by converting the number into a charCode otherwise return the number
+
 const isVow = (a) =>
   a.map((x) => ("aeiou".includes((y = String.fromCharCode(x))) ? y : x));
 
