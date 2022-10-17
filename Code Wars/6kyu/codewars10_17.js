@@ -4,6 +4,11 @@
 
 // If the left side is more heavy, return "Left"; if the right side is more heavy, return "Right"; if they are balanced, return "Balance".
 
+// parameters 2 strings
+// return string
+// example
+// pseudo code create two variables to hold the result of counting ? !, split each string by each character, then use reduce to create an object to hold the number of times ? ! appear, use object.entries to transform the object into an array, iterate through each array and check to see if the element is ! if it is multiply the number of times it appears by 2, otherwise if it is ? multiply the number of times it appears by 3, check to see if the left or right is larger or if they are equal
+
 let balance = (str1, str2) => {
   let left = 0;
   let right = 0;
@@ -23,12 +28,6 @@ let balance = (str1, str2) => {
   let arrLeft = Object.entries(countedLeft);
   let arrRight = Object.entries(countedRight);
 
-  //   let counted = [
-  //     ...Object.entries(countedLeft),
-  //     ...Object.entries(countedRight),
-  //   ];
-
-  //   console.log(arrLeft);
   arrLeft.map((x) => {
     if (x[0] == "!") {
       left += x[1] * 2;
