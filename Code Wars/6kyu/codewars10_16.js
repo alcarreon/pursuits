@@ -11,7 +11,6 @@
 
 const count = (str) => {
   let splitStr = str.split("");
-  console.log(splitStr);
 
   let counted = splitStr.reduce((x, y) => {
     x[y] = (x[y] || 0) + 1;
