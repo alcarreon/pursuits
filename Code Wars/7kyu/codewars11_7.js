@@ -30,13 +30,23 @@
 // // day 1
 // mountMoose.howMany(['John', 'joHN', 'carl']); => 2
 
+// parameters array
+// return integer
+// examples
+// pseudo code create a class for a song which takes a title as a string, artist as a string, and a method howMany which takes an array, create a new property as a set to hold unique elements, first find the size of the set then iterate over the array and add each element to the set to determine the number of unique listeners subtract the length of listeners to the intial sizeS
+
 class Song {
   constructor(title, artist) {
     this.title = title;
     this.artist = artist;
+    this.listeners = new Set();
   }
-  howMany(arr) {
-    return arr.length;
+  howMany(watches) {
+    let oldSize = this.listeners.size;
+    for (let viewer of watches) {
+      this.listeners.add(viewer.toLowerCase());
+    }
+    return this.listeners.size - oldSize;
   }
 }
 
