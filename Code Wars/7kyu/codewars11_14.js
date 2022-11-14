@@ -16,10 +16,10 @@
 // String has no spaces
 // Size is always positive
 
-// parameters
-// return
+// parameters string, number
+// return string
 // examples
-//
+// pseudo code creat an empty variable to hold the result as a string, then use a for loop to iterate over the string check to see if the iterator is divisable by the number provided or if it is equal to 0 if it is add the character to the string otherwise add a space and then add the character
 
 const splitInParts = (str, leng) => {
   let result = "";
