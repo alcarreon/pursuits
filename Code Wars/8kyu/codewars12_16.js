@@ -7,10 +7,10 @@
 // parameters array
 // return array
 // examples
-// pseudo code given an array filter through it checking that the last index of the element is equal to the current index
+// pseudo code given an array use set to remove duplicates and wrap it in array literal notation to make it into an array
 
 function distinct(arr) {
-  return arr.filter((x, y) => arr.indexOf(x) == y);
+  return [...new Set(arr)];
 }
 
 console.log(distinct([1])); // [1]
