@@ -1,33 +1,42 @@
-// Grasshopper - Check for factor
+// Help the Elite Squad of Brazilian forces BOPE
 
-// This function should test if the factor is a factor of base.
+// The BOPE is the squad of special forces of police that usually handles the operations in the Favelas in Rio de Janeiro.
 
-// Return true if it is a factor or false if it is not.
+// In this Kata you have to write a function that determine the number of magazines that every soldier has to have in his bag.
 
-// About factors
-// Factors are numbers you can multiply together to get another number.
+// You will receive the weapon and the number of streets that they have to cross. Considering that every street the officer shoots 3 times. Bellow there is the relation of weapons:
 
-// 2 and 3 are factors of 6 because: 2 * 3 = 6
+// PT92 - 17 bullets
+// M4A1 - 30 bullets
+// M16A2 - 30 bullets
+// PSG1 - 5 bullets
 
-// You can find a factor by dividing numbers. If the remainder is 0 then the number is a factor.
-// You can use the mod operator (%) in most languages to check for a remainder
-// For example 2 is not a factor of 7 because: 7 % 2 = 1
+// Example:
 
-// Note: base is a non-negative number, factor is a positive number.
+// ["PT92", 6] => 2 (6 streets 3 bullets each)
+// ["M4A1", 6] => 1
 
-// parameters two integers
-// return boolean
+// The return Will always be an integer so as the params.
+
+
+
+// parameters array
+// return integer
 // examples
-// pseudo code check to see that the mod of the numbers is zero
+// pseudo code create an object holding each gun and the number of builts each can fire, then create a variable to hold the result of taking the number of streets times 3 finally divide the variable by the number of bullets the gun can hold rounding up to the next whole number
 
-function checkForFactor(base, factor) {
-  return base % factor == 0;
+function magNumber(arr) {
+  let guns = { PT92: 17, M4A1: 30, M16A2: 30, PSG1: 5 };
+  let fired = arr[1] * 3;
+  return Math.ceil(fired / guns[arr[0]]);
 }
 
-console.log(checkForFactor(10, 2)); // true
+console.log(magNumber(["PT92", 6])); // 2
 
-console.log(checkForFactor(63, 7)); // true
+console.log(magNumber(["M4A1", 8])); // 1
 
-console.log(checkForFactor(9, 2)); // false
+console.log(magNumber(["M16A2", 19])); // 2
 
-console.log(checkForFactor(653, 7)); // false
+console.log(magNumber(["PSG1", 31])); // 19
+
+console.log(magNumber(["PT92", 19])); // 4
