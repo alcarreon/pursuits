@@ -38,3 +38,5 @@ function peopleWithAgeDrink(age) {
 }
 
 console.log(peopleWithAgeDrink(22)); // 'drink whisky'
+
+console.log(peopleWithAgeDrink(13));
