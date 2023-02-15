@@ -5,6 +5,15 @@
 
 // Ouput :: "Position of alphabet: 1"
 
+// parameters string
+
+// return string
+
+// examples
+
+// pseudo code
+// create a variable to hold the lettes of the alphabet then use a string literal to display the output add one to the index of the letter
+
 let position = (letter) => {
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
   return `Position of alphabet: ${alphabet.indexOf(letter) + 1}`;
