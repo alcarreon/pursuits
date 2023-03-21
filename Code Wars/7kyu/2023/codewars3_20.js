@@ -15,7 +15,7 @@ let dominator = (arr) => {
   arr.filter((x) => (counter[x] = counter[x] + 1 || 1));
   let total = Object.entries(counter).sort((x, y) => y[1] - x[1]);
   if (total[0][1] > arr.length / 2) {
-    return total[0][0];
+    return +total[0][0];
   } else {
     return -1;
   }
