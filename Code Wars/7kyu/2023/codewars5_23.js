@@ -19,7 +19,7 @@
 // parameters string and integer
 // return string
 // examples
-// pseudo code given a string check to see if the length of the string is less than the integer provided if it is return the entire string, otherwise check to see if the intege is less than or equal to 3 if it is slice from 0 to the integer, otherwwise slice from 0 to the integer minus 3
+// pseudo code given a string check to see if the length of the string is less than the integer provided if it is return the entire string, otherwise check to see if the intege is less than or equal to 3 if it is slice from 0 to the integer, otherwwise slice from 0 to the integer minus 32
 
 function trim(str, num) {
   if (str.length <= num) {
