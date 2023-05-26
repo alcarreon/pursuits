@@ -31,8 +31,7 @@
 // pseudo code given an array iterate through it and convert integers to binary
 
 function arrayPacking(arr) {
-  while (arr.length < 4) arr.push(0);
-  return (arr[3] << 24) | (arr[2] << 16) | (arr[1] << 8) | arr[0];
+  arr.reduceRight((n, x) => ((n << 8) | x) >>> 0, 0);
 }
 
 console.log(arrayPacking([24, 85, 0])); // 21784
